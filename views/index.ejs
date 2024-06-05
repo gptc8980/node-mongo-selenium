@@ -1,0 +1,35 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trends</title>
+</head>
+<body>
+    <h1>Trends</h1>
+    <ul>
+        <% trends.forEach(trend => { %>
+            <li>
+                Trend 1: <%= trend.nameoftrend1 %> <br>
+                Trend 2: <%= trend.nameoftrend2 %> <br>
+                Trend 3: <%= trend.nameoftrend3 %> <br>
+                Trend 4: <%= trend.nameoftrend4 %> <br>
+                Trend 5: <%= trend.nameoftrend5 %> <br>
+                IP Address: <%= trend.ip_address %>
+            </li>
+        <% }); %>
+        <pre><%= JSON.stringify(trends, null, 2) %></pre>
+
+    </ul>
+    <button onclick="fetchTrends()">Fetch Trends</button>
+
+    <script>
+        async function fetchTrends() {
+            const response = await fetch('/fetch-trends', { method: 'POST' });
+            if (response.ok) {
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

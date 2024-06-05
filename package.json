@@ -1,0 +1,23 @@
+{
+  "name": "mongo-selenium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "chromedriver": "^125.0.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "proxy-agent": "^6.4.0",
+    "selenium-webdriver": "^4.21.0",
+    "uuid": "^9.0.1"
+  }
+}
